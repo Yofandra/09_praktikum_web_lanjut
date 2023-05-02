@@ -90,6 +90,11 @@ class MahasiswaController extends Controller
         return view('mahasiswa.detail', compact('Mahasiswa'));
     }
 
+    public function khs($Nim){
+        $Mahasiswa = Mahasiswa::find($Nim);
+        return view('mahasiswa.khs', compact('Mahasiswa'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
